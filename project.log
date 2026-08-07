@@ -89,3 +89,223 @@
 2026-08-05 19:33:50 | INFO | BI | ========================
 2026-08-05 19:33:50 | INFO | BI | Executed successfully!
 2026-08-05 19:33:50 | INFO | BI | ========================
+2026-08-07 16:58:24 | INFO | BI | === RUN START ===
+2026-08-07 16:58:24 | INFO | BI | project=BI
+2026-08-07 16:58:24 | INFO | BI | repo_dir=bintel-06-storytelling
+2026-08-07 16:58:24 | INFO | BI | python=3.14.2
+2026-08-07 16:58:24 | INFO | BI | os=Windows 11
+2026-08-07 16:58:24 | INFO | BI | shell=powershell
+2026-08-07 16:58:24 | INFO | BI | cwd=.
+2026-08-07 16:58:24 | INFO | BI | github_actions=False
+2026-08-07 16:58:24 | INFO | BI | ========================
+2026-08-07 16:58:24 | INFO | BI | START main()
+2026-08-07 16:58:24 | INFO | BI | ========================
+2026-08-07 16:58:24 | INFO | BI | Input reporting data from: = data\reporting\sales_reporting_case.csv
+2026-08-07 16:58:24 | INFO | BI | CALL a function to load reporting-ready data........
+2026-08-07 16:58:24 | INFO | BI | Loading reporting-ready data
+2026-08-07 16:58:25 | INFO | BI |   Loaded 2392 reporting rows
+2026-08-07 16:58:25 | INFO | BI |   Verified 14 reporting columns
+2026-08-07 16:58:25 | INFO | BI | CALL a function to summarize sales by category........
+2026-08-07 16:58:25 | INFO | BI | Summarizing category sales for Region = 'East'
+2026-08-07 16:58:25 | INFO | BI |   Categories summarized: 4
+2026-08-07 16:58:25 | INFO | BI | CALL a function to select the leading category........
+2026-08-07 16:58:25 | INFO | BI |   Selected leading category for deeper analysis: Office
+2026-08-07 16:58:25 | INFO | BI | CALL a function to summarize monthly sales........
+2026-08-07 16:58:25 | INFO | BI | Summarizing monthly sales for Region = 'East'
+2026-08-07 16:58:25 | INFO | BI | Summarizing monthly sales for Category = 'Office'
+2026-08-07 16:58:25 | INFO | BI |   Months summarized: 12
+2026-08-07 16:58:25 | INFO | BI | CALL a function to summarize regional sales share........
+2026-08-07 16:58:25 | INFO | BI | Summarizing total sales by region
+2026-08-07 16:58:25 | INFO | BI |   Regions summarized: 6
+2026-08-07 16:58:25 | INFO | BI | CALL a function to summarize category x month sales........
+2026-08-07 16:58:25 | INFO | BI | Summarizing category x month sales for Region = 'East'
+2026-08-07 16:58:25 | INFO | BI |   Heatmap shape (categories x months): (4, 12)
+2026-08-07 16:58:25 | INFO | BI | CALL a function to plot category sales........
+2026-08-07 16:58:25 | INFO | BI | Creating chart: Sales by Category in East
+2026-08-07 16:58:26 | INFO | BI | Saved category chart: = docs\images\storytelling_category_sales_case.png
+2026-08-07 16:58:26 | INFO | BI | CALL a function to plot monthly sales........
+2026-08-07 16:58:26 | INFO | BI | Creating chart: Monthly Office Sales in East
+2026-08-07 16:58:26 | INFO | BI | Saved monthly chart: = docs\images\storytelling_monthly_sales_case.png
+2026-08-07 16:58:26 | INFO | BI | CALL matplotlib directly to plot regional sales share (pie)........
+2026-08-07 16:58:26 | INFO | BI | Saved regional share chart: = docs\images\storytelling_regional_share_case.png
+2026-08-07 16:58:26 | INFO | BI | CALL seaborn directly to plot category x month heatmap........
+2026-08-07 16:58:27 | INFO | BI | Saved category/month heatmap: = docs\images\storytelling_category_month_heatmap_case.png
+2026-08-07 16:58:27 | INFO | BI | CALL a function to identify key results........
+2026-08-07 16:58:27 | INFO | BI | Identifying key results
+2026-08-07 16:58:27 | INFO | BI |   Selected region: East
+2026-08-07 16:58:27 | INFO | BI |   Leading category: Office
+2026-08-07 16:58:27 | INFO | BI |   Leading category sales: $456,342.94
+2026-08-07 16:58:27 | INFO | BI |   Strongest month: 2025-05
+2026-08-07 16:58:27 | INFO | BI |   Strongest month sales: $61,229.06
+2026-08-07 16:58:27 | INFO | BI | CALL a function to show charts........
+2026-08-07 16:59:33 | INFO | BI | Storytelling workflow complete
+2026-08-07 16:59:33 | INFO | BI | CLOSE chart windows to continue.
+2026-08-07 16:59:33 | INFO | BI | Terminate this process with CTRL+c as needed.
+2026-08-07 16:59:33 | INFO | BI | ========================
+2026-08-07 16:59:33 | INFO | BI | Executed successfully!
+2026-08-07 16:59:33 | INFO | BI | ========================
+2026-08-07 17:00:33 | INFO | BI | === RUN START ===
+2026-08-07 17:00:33 | INFO | BI | project=BI
+2026-08-07 17:00:33 | INFO | BI | repo_dir=bintel-06-storytelling
+2026-08-07 17:00:33 | INFO | BI | python=3.14.2
+2026-08-07 17:00:33 | INFO | BI | os=Windows 11
+2026-08-07 17:00:33 | INFO | BI | shell=powershell
+2026-08-07 17:00:33 | INFO | BI | cwd=.
+2026-08-07 17:00:33 | INFO | BI | github_actions=False
+2026-08-07 17:00:33 | INFO | BI | ========================
+2026-08-07 17:00:33 | INFO | BI | START main()
+2026-08-07 17:00:33 | INFO | BI | ========================
+2026-08-07 17:00:33 | INFO | BI | Input reporting data from: = data\reporting\sales_reporting_case.csv
+2026-08-07 17:00:33 | INFO | BI | CALL a function to load reporting-ready data........
+2026-08-07 17:00:33 | INFO | BI | Loading reporting-ready data
+2026-08-07 17:00:33 | INFO | BI |   Loaded 2392 reporting rows
+2026-08-07 17:00:33 | INFO | BI |   Verified 14 reporting columns
+2026-08-07 17:00:33 | INFO | BI | CALL a function to summarize sales by category........
+2026-08-07 17:00:33 | INFO | BI | Summarizing category sales for Region = 'East'
+2026-08-07 17:00:33 | INFO | BI |   Categories summarized: 4
+2026-08-07 17:00:33 | INFO | BI | CALL a function to select the leading category........
+2026-08-07 17:00:33 | INFO | BI |   Selected leading category for deeper analysis: Office
+2026-08-07 17:00:33 | INFO | BI | CALL a function to summarize monthly sales........
+2026-08-07 17:00:33 | INFO | BI | Summarizing monthly sales for Region = 'East'
+2026-08-07 17:00:33 | INFO | BI | Summarizing monthly sales for Category = 'Office'
+2026-08-07 17:00:33 | INFO | BI |   Months summarized: 12
+2026-08-07 17:00:33 | INFO | BI | CALL a function to summarize regional sales share........
+2026-08-07 17:00:33 | INFO | BI | Summarizing total sales by region
+2026-08-07 17:00:33 | INFO | BI |   Regions summarized: 6
+2026-08-07 17:00:33 | INFO | BI | CALL a function to summarize category x month sales........
+2026-08-07 17:00:33 | INFO | BI | Summarizing category x month sales for Region = 'East'
+2026-08-07 17:00:33 | INFO | BI |   Heatmap shape (categories x months): (4, 12)
+2026-08-07 17:00:33 | INFO | BI | CALL a function to plot category sales........
+2026-08-07 17:00:33 | INFO | BI | Creating chart: Sales by Category in East
+2026-08-07 17:00:33 | INFO | BI | Saved category chart: = docs\images\storytelling_category_sales_case.png
+2026-08-07 17:00:33 | INFO | BI | CALL a function to plot monthly sales........
+2026-08-07 17:00:33 | INFO | BI | Creating chart: Monthly Office Sales in East
+2026-08-07 17:00:33 | INFO | BI | Saved monthly chart: = docs\images\storytelling_monthly_sales_case.png
+2026-08-07 17:00:33 | INFO | BI | CALL matplotlib directly to plot regional sales share (pie)........
+2026-08-07 17:00:34 | INFO | BI | Saved regional share chart: = docs\images\storytelling_regional_share_case.png
+2026-08-07 17:00:34 | INFO | BI | CALL seaborn directly to plot category x month heatmap........
+2026-08-07 17:00:34 | INFO | BI | Saved category/month heatmap: = docs\images\storytelling_category_month_heatmap_case.png
+2026-08-07 17:00:34 | INFO | BI | CALL a function to identify key results........
+2026-08-07 17:00:34 | INFO | BI | Identifying key results
+2026-08-07 17:00:34 | INFO | BI |   Selected region: East
+2026-08-07 17:00:34 | INFO | BI |   Leading category: Office
+2026-08-07 17:00:34 | INFO | BI |   Leading category sales: $456,342.94
+2026-08-07 17:00:34 | INFO | BI |   Strongest month: 2025-05
+2026-08-07 17:00:34 | INFO | BI |   Strongest month sales: $61,229.06
+2026-08-07 17:00:34 | INFO | BI | CALL a function to show charts........
+2026-08-07 17:00:37 | INFO | BI | Storytelling workflow complete
+2026-08-07 17:00:37 | INFO | BI | CLOSE chart windows to continue.
+2026-08-07 17:00:37 | INFO | BI | Terminate this process with CTRL+c as needed.
+2026-08-07 17:00:37 | INFO | BI | ========================
+2026-08-07 17:00:37 | INFO | BI | Executed successfully!
+2026-08-07 17:00:37 | INFO | BI | ========================
+2026-08-07 17:03:36 | INFO | BI | === RUN START ===
+2026-08-07 17:03:36 | INFO | BI | project=BI
+2026-08-07 17:03:36 | INFO | BI | repo_dir=bintel-06-storytelling
+2026-08-07 17:03:36 | INFO | BI | python=3.14.2
+2026-08-07 17:03:36 | INFO | BI | os=Windows 11
+2026-08-07 17:03:36 | INFO | BI | shell=powershell
+2026-08-07 17:03:36 | INFO | BI | cwd=.
+2026-08-07 17:03:36 | INFO | BI | github_actions=False
+2026-08-07 17:03:36 | INFO | BI | ========================
+2026-08-07 17:03:36 | INFO | BI | START main()
+2026-08-07 17:03:36 | INFO | BI | ========================
+2026-08-07 17:03:36 | INFO | BI | Input reporting data from: = data\reporting\sales_reporting_case.csv
+2026-08-07 17:03:36 | INFO | BI | CALL a function to load reporting-ready data........
+2026-08-07 17:03:36 | INFO | BI | Loading reporting-ready data
+2026-08-07 17:03:36 | INFO | BI |   Loaded 2392 reporting rows
+2026-08-07 17:03:36 | INFO | BI |   Verified 14 reporting columns
+2026-08-07 17:03:36 | INFO | BI | CALL a function to summarize sales by category........
+2026-08-07 17:03:36 | INFO | BI | Summarizing category sales for Region = 'East'
+2026-08-07 17:03:36 | INFO | BI |   Categories summarized: 4
+2026-08-07 17:03:36 | INFO | BI | CALL a function to select the leading category........
+2026-08-07 17:03:36 | INFO | BI |   Selected leading category for deeper analysis: Office
+2026-08-07 17:03:36 | INFO | BI | CALL a function to summarize monthly sales........
+2026-08-07 17:03:36 | INFO | BI | Summarizing monthly sales for Region = 'East'
+2026-08-07 17:03:36 | INFO | BI | Summarizing monthly sales for Category = 'Office'
+2026-08-07 17:03:36 | INFO | BI |   Months summarized: 12
+2026-08-07 17:03:36 | INFO | BI | CALL a function to summarize regional sales share........
+2026-08-07 17:03:36 | INFO | BI | Summarizing total sales by region
+2026-08-07 17:03:36 | INFO | BI |   Regions summarized: 6
+2026-08-07 17:03:36 | INFO | BI | CALL a function to summarize category x month sales........
+2026-08-07 17:03:36 | INFO | BI | Summarizing category x month sales for Region = 'East'
+2026-08-07 17:03:36 | INFO | BI |   Heatmap shape (categories x months): (4, 12)
+2026-08-07 17:03:36 | INFO | BI | CALL a function to plot category sales........
+2026-08-07 17:03:36 | INFO | BI | Creating chart: Sales by Category in East
+2026-08-07 17:03:37 | INFO | BI | Saved category chart: = docs\images\storytelling_category_sales_case.png
+2026-08-07 17:03:37 | INFO | BI | CALL a function to plot monthly sales........
+2026-08-07 17:03:37 | INFO | BI | Creating chart: Monthly Office Sales in East
+2026-08-07 17:03:37 | INFO | BI | Saved monthly chart: = docs\images\storytelling_monthly_sales_case.png
+2026-08-07 17:03:37 | INFO | BI | CALL matplotlib directly to plot regional sales share (pie)........
+2026-08-07 17:03:37 | INFO | BI | Saved regional share chart: = docs\images\storytelling_regional_share_case.png
+2026-08-07 17:03:37 | INFO | BI | CALL seaborn directly to plot category x month heatmap........
+2026-08-07 17:03:38 | INFO | BI | Saved category/month heatmap: = docs\images\storytelling_category_month_heatmap_case.png
+2026-08-07 17:03:38 | INFO | BI | CALL a function to identify key results........
+2026-08-07 17:03:38 | INFO | BI | Identifying key results
+2026-08-07 17:03:38 | INFO | BI |   Selected region: East
+2026-08-07 17:03:38 | INFO | BI |   Leading category: Office
+2026-08-07 17:03:38 | INFO | BI |   Leading category sales: $456,342.94
+2026-08-07 17:03:38 | INFO | BI |   Strongest month: 2025-05
+2026-08-07 17:03:38 | INFO | BI |   Strongest month sales: $61,229.06
+2026-08-07 17:03:38 | INFO | BI | CALL a function to show charts........
+2026-08-07 17:03:41 | INFO | BI | Storytelling workflow complete
+2026-08-07 17:03:41 | INFO | BI | CLOSE chart windows to continue.
+2026-08-07 17:03:41 | INFO | BI | Terminate this process with CTRL+c as needed.
+2026-08-07 17:03:41 | INFO | BI | ========================
+2026-08-07 17:03:41 | INFO | BI | Executed successfully!
+2026-08-07 17:03:41 | INFO | BI | ========================
+2026-08-07 17:05:34 | INFO | BI | === RUN START ===
+2026-08-07 17:05:34 | INFO | BI | project=BI
+2026-08-07 17:05:34 | INFO | BI | repo_dir=bintel-06-storytelling
+2026-08-07 17:05:34 | INFO | BI | python=3.14.2
+2026-08-07 17:05:34 | INFO | BI | os=Windows 11
+2026-08-07 17:05:34 | INFO | BI | shell=powershell
+2026-08-07 17:05:34 | INFO | BI | cwd=.
+2026-08-07 17:05:34 | INFO | BI | github_actions=False
+2026-08-07 17:05:34 | INFO | BI | ========================
+2026-08-07 17:05:34 | INFO | BI | START main()
+2026-08-07 17:05:34 | INFO | BI | ========================
+2026-08-07 17:05:34 | INFO | BI | Input reporting data from: = data\reporting\sales_reporting_case.csv
+2026-08-07 17:05:34 | INFO | BI | CALL a function to load reporting-ready data........
+2026-08-07 17:05:34 | INFO | BI | Loading reporting-ready data
+2026-08-07 17:05:34 | INFO | BI |   Loaded 2392 reporting rows
+2026-08-07 17:05:34 | INFO | BI |   Verified 14 reporting columns
+2026-08-07 17:05:34 | INFO | BI | CALL a function to summarize sales by category........
+2026-08-07 17:05:34 | INFO | BI | Summarizing category sales for Region = 'East'
+2026-08-07 17:05:34 | INFO | BI |   Categories summarized: 4
+2026-08-07 17:05:34 | INFO | BI | CALL a function to select the leading category........
+2026-08-07 17:05:34 | INFO | BI |   Selected leading category for deeper analysis: Office
+2026-08-07 17:05:34 | INFO | BI | CALL a function to summarize monthly sales........
+2026-08-07 17:05:34 | INFO | BI | Summarizing monthly sales for Region = 'East'
+2026-08-07 17:05:34 | INFO | BI | Summarizing monthly sales for Category = 'Office'
+2026-08-07 17:05:34 | INFO | BI |   Months summarized: 12
+2026-08-07 17:05:34 | INFO | BI | CALL a function to summarize regional sales share........
+2026-08-07 17:05:34 | INFO | BI | Summarizing total sales by region
+2026-08-07 17:05:35 | INFO | BI |   Regions summarized: 6
+2026-08-07 17:05:35 | INFO | BI | CALL a function to summarize category x month sales........
+2026-08-07 17:05:35 | INFO | BI | Summarizing category x month sales for Region = 'East'
+2026-08-07 17:05:35 | INFO | BI |   Heatmap shape (categories x months): (4, 12)
+2026-08-07 17:05:35 | INFO | BI | CALL a function to plot category sales........
+2026-08-07 17:05:35 | INFO | BI | Creating chart: Sales by Category in East
+2026-08-07 17:05:35 | INFO | BI | Saved category chart: = docs\images\storytelling_category_sales_case.png
+2026-08-07 17:05:35 | INFO | BI | CALL a function to plot monthly sales........
+2026-08-07 17:05:35 | INFO | BI | Creating chart: Monthly Office Sales in East
+2026-08-07 17:05:35 | INFO | BI | Saved monthly chart: = docs\images\storytelling_monthly_sales_case.png
+2026-08-07 17:05:35 | INFO | BI | CALL matplotlib directly to plot regional sales share (pie)........
+2026-08-07 17:05:35 | INFO | BI | Saved regional share chart: = docs\images\storytelling_regional_share_jugurtha.png
+2026-08-07 17:05:35 | INFO | BI | CALL seaborn directly to plot category x month heatmap........
+2026-08-07 17:05:36 | INFO | BI | Saved category/month heatmap: = docs\images\storytelling_category_month_heatmap_jugurtha.png
+2026-08-07 17:05:36 | INFO | BI | CALL a function to identify key results........
+2026-08-07 17:05:36 | INFO | BI | Identifying key results
+2026-08-07 17:05:36 | INFO | BI |   Selected region: East
+2026-08-07 17:05:36 | INFO | BI |   Leading category: Office
+2026-08-07 17:05:36 | INFO | BI |   Leading category sales: $456,342.94
+2026-08-07 17:05:36 | INFO | BI |   Strongest month: 2025-05
+2026-08-07 17:05:36 | INFO | BI |   Strongest month sales: $61,229.06
+2026-08-07 17:05:36 | INFO | BI | CALL a function to show charts........
+2026-08-07 17:05:39 | INFO | BI | Storytelling workflow complete
+2026-08-07 17:05:39 | INFO | BI | CLOSE chart windows to continue.
+2026-08-07 17:05:39 | INFO | BI | Terminate this process with CTRL+c as needed.
+2026-08-07 17:05:39 | INFO | BI | ========================
+2026-08-07 17:05:39 | INFO | BI | Executed successfully!
+2026-08-07 17:05:39 | INFO | BI | ========================

@@ -110,7 +110,7 @@ uv run python -m bizintel.storytelling_case
 
 # TASK 2: run your own storytelling module that looks at a different problem
 # add your command in the line below
-
+uv run python -m bizintel.storytelling_jugurtha
 
 # run common chores
 uv run ruff format .
