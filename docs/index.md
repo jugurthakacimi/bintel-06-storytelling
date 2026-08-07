@@ -41,125 +41,82 @@ but answer a different business question.
 
 ## Phase 4. Technical Modification
 
-Make one small technical modification to the example project.
+**What you changed:**
+In `storytelling_jugurtha.py`, I changed the color palette used in the first chart (`plot_bar()` for category sales by region) from `"Blues_d"` to `"crest"`.
 
-Possible modifications include:
+```python
+palette="Blues_d",   # before
+palette="crest",      # after
+```
 
-- Change a selected value.
-- Change a chart title.
-- Change a chart label.
-- Change a chart palette.
-- Change a chart output file name.
-- Display in a different sort order.
-- Change a log message to be more clear or better formatted.
+**Why you chose that change:**
+It's a small, low-risk, purely visual change — it doesn't touch any data logic, function signatures, or business results, so it's a safe way to demonstrate editing a working project without breaking anything. It also made the chart easier to read against the docs page background, since `crest` has more contrast between bars than `Blues_d` did.
 
-Describe your small technical modification to the example project.
+**How you verified that it worked:**
+I re-ran the script with `uv run python -m bizintel.storytelling_jugurtha`, confirmed it completed without errors, and opened the regenerated `docs/images/storytelling_category_sales_jugurtha.png` to visually compare it against the previous version.
 
-Include:
+**What result, output, chart, metric, or behavior confirmed the change:**
+The category sales bar chart now renders in the `crest` colormap (teal-to-blue gradient) instead of the original `Blues_d` gradient. No log output, values, or file names changed — only the chart's appearance. The `TotalSales` figures, category ordering, and file path (`storytelling_category_sales_case.png`) all stayed identical, confirming the change was purely cosmetic and isolated.
 
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
+**Compared with the example project, explain what is different and why the change matters:**
+The underlying data pipeline — loading, filtering, grouping, and aggregating — is completely unchanged from the original example. The only difference is one keyword argument passed into `plot_bar()`. This matters because it shows the separation between the *analysis logic* (which stayed untouched and trustworthy) and the *presentation layer* (which can be safely tuned without risking the correctness of the underlying numbers) — an important distinction in BI work.
 
-Compared with the example project,
-explain what is different and why the change matters.
+**Was it easy, or surprisingly challenging and why do you think so?**
+Easy. Because `plot_bar()` already exposed `palette` as a named parameter, the change was a one-line edit with no ripple effects elsewhere in the file. The main thing to double check was that `"crest"` is a valid seaborn palette name, since an invalid string would only fail at runtime rather than at edit time.
 
-Was it easy, or surprisingly challenging and why do you think so?
+---
 
 ## Phase 5. Custom Project
 
-Describe your custom BI storytelling project.
-
 ### Basis and Problem
 
-Describe the data you started with.
+I used the same reporting-ready dataset as the example project: `data/reporting/sales_reporting_case.csv`. I queried the full table (no need for the raw warehouse tables — this file is already the reporting-ready output of that earlier stage) and used four columns:
 
-Include:
+- **Region** — the categorical dimension used to compare markets against each other
+- **Category** — the categorical dimension used to compare product lines within a region
+- **YearMonth** — the time dimension used to see when sales occur
+- **SaleAmount** — the numeric measure summed to produce total sales
 
-- Which tables you queried and which columns you used
-- Why those columns are relevant to your business goal
-- Any data limitations that affect your conclusions
+These columns are relevant because the business goal is to understand *where* (region), *what* (category), and *when* (month) sales are concentrated — the three dimensions needed to both size an opportunity and act on it.
+
 
 ### Business Question
 
-State the exact business question you chose.
+> What share of total company sales does the East region represent compared to other regions, and within East, which category/month combinations drive the strongest and weakest performance?
 
-For example:
-
-> Which product category has the lowest total sales in the selected region, and during which month are its sales weakest?
-
-Your question should be:
-
-- Clear
-- Specific
-- Answerable with the available data
-- Similar in scope to the example project
-
-Explain:
-
-- Why the question might matter to the business
-- What decision or next step the result could support
-- What **action** could be taken based on the answer
+This matters because it answers two levels of a common business concern at once: *is East worth the attention it's getting* (relative to other regions), and *if so, where inside East should effort be focused or reinforced* (which category, which season). The result could support a decision about regional resourcing — for example, whether to increase East's marketing budget, and if so, which category and time of year to target the spend for maximum effect. The concrete **action** it supports is: if East is a large, growing share of the business, allocate more inventory/marketing spend to its strongest category ahead of its strongest month; if a category is consistently weak across all months in the heatmap, consider whether to discontinue or reposition it in that region.
 
 ### Analysis Approach
 
-Describe how you answered the question.
-
-Include:
-
-- How you filtered the reporting data
-- Which dimension you grouped by
-- Which measure you aggregated
-- Whether you sorted from highest to lowest or lowest to highest
-- How the first result guided the second part of the analysis
-- Which charts you created
+- I did **not** filter for the first chart — I grouped the *entire* reporting dataset by `Region` and summed `SaleAmount`, so every region could be compared on equal footing.
+- For the second chart, I **filtered (sliced)** the data down to `Region == "East"` only, then grouped by two dimensions at once — `Category` and `YearMonth` — using a pivot table, with `SaleAmount` summed as the measure.
+- The first chart (regional share) doesn't need a strict sort since a pie chart shows proportion visually, but the underlying `df_regional_sales` table is sorted descending by `TotalSales` so East's rank among regions is clear at a glance.
+- The second chart's month columns are sorted chronologically (not by value) so seasonal patterns can be read left to right.
+- The first result (East's overall share of company sales) is what justifies drilling into East specifically for the second chart — this is the same "compare, then drill down" pattern as the example project, just using a pie chart + heatmap instead of a bar chart + line chart.
+- **Charts created:** a pie chart of total sales share by region, and a heatmap of Category × Month sales within East.
 
 ### Charts and Evidence
 
-Create at least two connected charts.
+**Chart 1 — Share of Total Company Sales by Region** (`docs/images/storytelling_regional_share_jugurtha.png`)
+A pie chart with a clear title ("Share of Total Company Sales by Region"), percentage labels on each slice, and one wedge per region. This chart provides the evidence for the first half of the business question — it shows exactly what fraction of total company revenue East contributes relative to every other region, establishing whether East deserves the deeper look that follows.
 
-The first chart should answer the first part of your business question,
-often an initial comparison or result.
+**Chart 2 — Category × Month Sales Heatmap in East** (`docs/images/storytelling_category_month_heatmap_jugurtha.png`)
+A heatmap with categories on the y-axis, months on the x-axis (labeled "Month" and "Category"), a titled color scale ("Total Sales ($)"), and annotated cell values for readability. This chart provides the evidence for the second half of the business question — it shows, cell by cell, exactly which category is strongest and which is weakest in every month within East, revealing seasonal patterns that a single-category line chart would miss.
 
-The second chart should be a connected look deeper at that initial result.
-
-For each chart:
-
-- Use a clear title
-- Label the axes
-- Make the chart readable
-- Save the chart in the project
-- Display the chart in this documentation page
-- Explain what evidence the chart provides
+![alt text](image.png)
+![alt text](image-1.png)
 
 ### Findings and Recommendation
 
-Describe what you found and what you recommend.
-
-Include:
-
-- The main result of your analysis
-- Whether the result was expected or surprising
-- A specific recommended business action based on the data
-- One reasonable action or next question
-- Any limitations or cautions
+- **Main result:** East represents 33.6% of total company sales, making it the 1st largest region. Within East, Office is strongest in May 2025, while Clothing is weakest across nearly all months."
+- **Recommended action:** Increase inventory and marketing spend for East's Office ahead of its strongest month; investigate why the weakest category underperforms across the heatmap. We could consider a promotion, repricing, or discontinuing it in that region.
+- **Next question:** Does the weakest category in East also underperform in other regions, or is this an East-specific problem?
 
 ### Storytelling Summary
 
-Summarize your custom storytelling project.
+This project started from the same reporting-ready sales dataset as the example project, but asked a different, two-part question: how big a piece of the company East represents, and where inside East the real strengths and weaknesses sit month by month. The pie chart delivered the "how big" answer at a glance, and the heatmap turned that single regional number into an actionable map of category-by-month performance. Together they demonstrate the core BI storytelling pattern — start broad (compare all regions), then drill into the one that matters (East's categories and months) — so a decision-maker can go from "where should I look" to "what should I do about it" in two charts. More generally, this shows how BI storytelling turns a flat CSV into a narrative that supports a specific, defensible business action rather than just presenting numbers.
 
-Include:
-
-- The business question / problem / goal you addressed
-- The data you started with
-- The main result
-- The insight you produced
-- The action or next question you recommended
-- What you learned about BI storytelling
-- How this process could support business intelligence in general
-
-Display at least two charts along with your narrative:
-
-1. A chart showing the initial comparison
-2. A chart showing the deeper analysis of the selected result
+1. Chart showing the initial comparison: **Share of Total Company Sales by Region** (pie chart)
+![alt text](image-2.png)
+2. Chart showing the deeper analysis: **Category × Month Sales Heatmap in East** (heatmap)
+![alt text](image-3.png)

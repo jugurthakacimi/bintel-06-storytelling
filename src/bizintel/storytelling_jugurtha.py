@@ -628,7 +628,7 @@ def main() -> None:
         title=f"Sales by Category in {SELECTED_REGION}",
         xlabel="Product Category",
         ylabel="Total Sales ($)",
-        palette="Blues_d",
+        palette="crest",
     )
     plt.savefig(STORYTELLING_CHART_FILE_1, bbox_inches="tight")
     log_path(LOG, "Saved category chart:", STORYTELLING_CHART_FILE_1)
@@ -652,7 +652,7 @@ def main() -> None:
         labels=df_regional_sales["Region"],
         autopct="%1.1f%%",
         startangle=90,
-        colors=sns.color_palette("Blues_d", n_colors=df_regional_sales.shape[0]),
+        colors=sns.color_palette("crest", n_colors=df_regional_sales.shape[0]),
     )
     ax3.set_title("Share of Total Company Sales by Region")
     ax3.axis("equal")
