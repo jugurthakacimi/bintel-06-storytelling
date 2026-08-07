@@ -103,8 +103,8 @@ A pie chart with a clear title ("Share of Total Company Sales by Region"), perce
 **Chart 2 — Category × Month Sales Heatmap in East** (`docs/images/storytelling_category_month_heatmap_jugurtha.png`)
 A heatmap with categories on the y-axis, months on the x-axis (labeled "Month" and "Category"), a titled color scale ("Total Sales ($)"), and annotated cell values for readability. This chart provides the evidence for the second half of the business question — it shows, cell by cell, exactly which category is strongest and which is weakest in every month within East, revealing seasonal patterns that a single-category line chart would miss.
 
-![alt text](image.png)
 ![alt text](image-1.png)
+![alt text](image-3.png)
 
 ### Findings and Recommendation
 
